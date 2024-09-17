@@ -98,3 +98,28 @@ footer {
         transform: translateY(0);
     }
 }
+/* Định dạng cho phần thư viện ảnh */
+.gallery {
+    padding: 60px 0;
+    background-color: #f0f0f5;
+    text-align: center;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
