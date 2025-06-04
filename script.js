@@ -1,20 +1,10 @@
-// Animation for features section
-gsap.from(".section-title", { duration: 1, y: 50, opacity: 0, ease: "power2.out", delay: 0.5 });
-gsap.from(".card", {
-    duration: 1,
-    opacity: 0,
-    scale: 0.9,
-    stagger: 0.2,
-    ease: "power2.out",
-    delay: 1
-});
-
-// Animation for gallery images
-gsap.from(".gallery img", {
-    duration: 1,
-    opacity: 0,
-    scale: 0.9,
-    stagger: 0.2,
-    ease: "power2.out",
-    delay: 1.5
-});
+ document.querySelectorAll('.category-title').forEach(title => {
+            title.addEventListener('click', () => {
+                const commandList = title.nextElementSibling;
+                const icon = title.querySelector('.fa-chevron-down');
+                
+                commandList.style.display = commandList.style.display === 'none' ? 'grid' : 'none';
+                icon.classList.toggle('fa-chevron-up');
+                icon.classList.toggle('fa-chevron-down');
+            });
+        });
